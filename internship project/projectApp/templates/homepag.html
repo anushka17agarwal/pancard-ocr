@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Info</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<style>
+    .info{
+        text-align: center;
+        margin-top: 100px;
+        margin-bottom: 20px;
+    }
+    .block{
+        margin-top: 150px;
+        text-align: center;
+  border: 3px solid green;
+    }
+</style>
+</head>
+<body>
+    <div class="info">
+    <h1  style="color:red;">Here are your details</h1>
+    <div class="block">
+    <p> Name: {{name}}</p>
+    <p> Date Of Birth: Date: {{day}} Month: {{month}} Year: {{ year}}</p>
+    <p>PanNumber: {{number}}</p>
+</div>
+
+</div>
+</body>
+</html>

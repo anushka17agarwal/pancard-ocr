@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Upload Your Doc</title>
+    <style>
+        .head{
+            text-align: center;
+            margin-top: 130px;
+            margin-bottom: 100px;
+        }
+       .button{
+           width: 50%;
+       }
+       .button1{
+        width: 100% !important;
+       }
+        .upload{
+            margin: 30px;
+            margin-top: 10px;
+        }
+        .center{
+           
+  text-align: center !important;
+  
+  
+}
+        
+    </style>
+</head>
+<body>
+<div>
+<h1 class="head">Upload Your Document Here</h1> 
+<div class="center">
+<form method="post" enctype="multipart/form-data">
+{% csrf_token %}
+
+<input type="file" required name="document" id="uploadImage">
+
+<button type="submit" class="btn"  id="first-button">Upload file</button>
+
+<button id="second-button" class="btn hide"><a href="{% url 'result' %}"alt='Broken Link'>Click the Button to see your details</a></button>
+</div>
+<script type="text/javascript">
+ 
+ $("#first-button").click(function(){
+    ev.preventDefault();    
+    $('#second-button').removeClass('hide');
+    $('#first-button').addClass('hide');
+  });
+
+    </script> 
+ </form>
+</div>
+</body>
+</html>
